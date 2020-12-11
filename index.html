@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="#">Adrian Yonam</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+
+            <h1 class="display-4">ADRIAN YONAM LOVARI MINGGU</h1>
+            <p>Mahasiswa Teknik Informatika - D121181505 </p>
+
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Contoh 1
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p> Dari suatu mesin Non Deterministic Finite Automata (NFA) dapat dikonversi atau dibuat menjadi suatu mesin Deterministic Finite Automata (DFA) yang memiliki kemampuan menerima Bahasa yang sama (ekuivalen). </p>
+                <p>Berikut contoh konversi dari Non Deterministic Finite Automata menjadi Deterministic Finite Automata:</p>
+                <p>- Berikut table transisi dan diagram transisi untuk NFA :
+                </p>
+                <p><img src="img/222.png" width="500"></p>
+                <p>Dapat dilihat dari gambar di atas ada suatu state yang diberi inputan menuju ke beberapa state, yaitu S0 yang diberi inputan b bisa menuju ke S0 dan S1 Lalu dikonversi menjadi DFA, dengan cara membuat state baru berupa gabungan dari S0
+                    dan S1. Lalu untuk state {S0,S1} jika diberi inputan a maka hasilnya adalah gabungan dari hasil S0 dan S1 yang diberi inputan a yaitu {S0,S1} Lalu untuk state {S0,S1} jika diberi inputan b maka hasilnya adalah gabungan dari hasil S0
+                    dan S1 yang diberi inputan b yaitu {S0,S1} Berikuta table transisi dan diagram transisi untuk DFA nya </p>
+            </div>
+            <div class="col">
+                <p>Setelah mencari transisi untuk state {X2,X3} berikutnya adalah mencari transisi dari X5 (hasil dari transisi X1 jika diberikan input 2). Karena state X5 adalah 1 state sendiri di NFA juga maka hasil transisi dari X5 di DFA akan sama dengan
+                    transisi di NFA.</p>
+                <p><img src="img/223.png" width="500"></p>
+                <p> Jika kita lihat tabel transisi DFA saat ini sudah ada 3 state yang kita cari transisinya yaitu X1, {X2,X3} dan {X5}. Kita lihat bahwa state {X2,X3} jika diberikan input 1 maka akan menuju ke state {X3, X6} dan seperti penjelasan sebelumnya
+                    bahwa di DFA tidak diijinkan untuk memiliki transisi lebih dari 1 untuk input yang sama, maka kita akan menganggap bahwa state {X3, X6} adalah sebuah state (State baru lagi). Demikian juga untuk state {X3, X4} merupakan sebuah state
+                    hasil dari transisi {X2, X3} jika diberikan input 2. Langkah berikutnya kita akan mencari transisi dari state {X3,X6} dan {X3,X4}.
+                </p>
+                <p>Transisi X3 jika diberikan input 1 adalah X6 dan transisi X6 jika diberikan input 1 tidak akan menuju state manapun sehingga transisi dari state {X3, X6} untuk input 1 adalah X6 saja. Transisi X3 jika diberikan input 2 adalah X4 dan transisi
+                    X6 jika diberikan input 2 tidak akan menuju state manapun sehingga transisi dari state {X3, X6} jika diberikan input 2 adalah X4 saja.</p>
+                <p><img src="img/224.png" width="500"></p>
+                <p> Transisi X3 jika diberikan input 1 adalah X6 dan transisi X4 jika diberikan input 1 adalah X4 sehingga transisi dari {X3,X4} jika diberikan input 1 adalah {X6, X4}. Transisi X3 jika diberikan input 2 adalah X4 dan transisi X4 jika diberikan
+                    input 2 adalah X6 sehingga transisi dari {X3,X4} jika diberikan input 2 adalah {X4, X6}.</p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Contoh 2
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Sebuah diagram NFA dapat dikonversi menjadi DFA dengan membuat table transisi yang baru berdasarkan analisa dari transisi pada NFA. Perhatikan contoh berikut ini. </p>
+                <p><img src="img/225.png" width="500"></p>
+                <p>
+                    Jika diberikan sebuah NFA seperti pada gambar diatas dengan X1 sebagai state awal (Start state) dan X6 sebagai state akhir (final state). Alphabet yang digunakan pada NFA tersebut adalah {1,2} dan berikut ini adalah tabel transisi dari diagram tersebut</p>
+                <p><img src="img/226.png" width="500"></p>
+                <p>Biasanya pada tabel transisi untuk menandakan sebuah start state diberikan dengan tanda panah, dan untuk final state ditandakan dengan tanda *. Setelah kita mengetahui tabel transisi dari NFA maka kita akan membuat tabel transisi dari
+                    DFA tersebut. </p>
+                <p>Pada awalnya start state pada DFA akan sama dengan start state di NFA, yaitu X1. Kita lihat bahwa transisi dari state X1 jika diberikan input 1 maka akan menuju ke 2 states yang berbeda, yaitu X2 dan X3. Sedangkan jika diberikan input
+                    2 maka akan menuju ke state X5 saja. Pada tahap awal tabel transisi dari DFA akan menjadi seperti berikut ini.</p>
+
+
+            </div>
+            <div class="col">
+                <p>Transisi X3 jika diberikan input 1 adalah X6 dan transisi X4 jika diberikan input 1 adalah X4 sehingga transisi dari {X3,X4} jika diberikan input 1 adalah {X6, X4}. Transisi X3 jika diberikan input 2 adalah X4 dan transisi X4 jika diberikan
+                    input 2 adalah X6 sehingga transisi dari {X3,X4} jika diberikan input 2 adalah {X4, X6}.</p>
+                <p><img src="img/227.png" width="500"></p>
+                <p>Proses pencarian transisi akan terus berulang sampai seluruh state sudah memiliki transisinya. Bisa dilihat pada tabel diatas untuk saat ini kita sudah memiliki 5 buah transisi state namun masih ada state yang belum ada transisinya ( yang
+                    ditandai dengan highlight kuning). Maka langkah berikutnya adalah kita masih perlu mencari transisi untuk state {X5, X6}, X6, X4, dan {X4,X6}. State {X4, X6} adalah sama dengan state {X6, X4} karena itu hanya penamaan saja yang terpenting
+                    adalah himpunan statenya tetap sama.</p>
+                <p>Setelah pencarian semua state maka akan diperoleh tabel transisi DFA sebagai berikut.</p>
+                <p><img src="img/228.png" width="500"></p>
+                <p> Final state pada DFA adalah state di DFA yang mengandung final state di NFA. Pada contoh final state di NFA adalah X6, sehingga semua state di DFA yang mengandung state X6 menjadi final state di DFA</p>
+
+            </div>
+        </div>
+    </div>
